@@ -39,5 +39,47 @@ filtering, and matrix factorization.
 - [ ] Week 8–10: Matrix factorization + parameter tuning
 - [ ] Week 11–12: Streamlit interface + final evaluation + documentation
 - [ ] Week 13: Presentation and demonstration
-
 ## Project Structure
+movie-recommender-dsa4060/
+├── data/
+│ ├── raw/ # original MovieLens files
+│ └── processed/ # cleaned and split data
+├── notebooks/
+│ ├── 01_data_inspection.ipynb
+│ ├── 02_baseline.ipynb
+│ ├── 03_content_based.ipynb
+│ ├── 04_collaborative_filtering.ipynb
+│ └── 05_matrix_factorization.ipynb
+├── src/
+│ ├── data_loader.py
+│ ├── baseline.py
+│ ├── content_based.py
+│ ├── collaborative.py
+│ ├── matrix_factorization.py
+│ └── evaluate.py
+├── app/
+│ └── app.py
+├── requirements.txt
+└── README.md
+
+## How to Run
+1. Download MovieLens Latest Small from https://grouplens.org/datasets/movielens/
+2. Place `ratings.csv` and `movies.csv` in `data/raw/`
+3. Install dependencies:
+   pip install -r requirements.txt
+4. Run the Streamlit app:
+   streamlit run app/app.py
+
+## Requirements
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+streamlit
+jupyter
+surprise
+
+## References
+Harper, F. M., & Konstan, J. A. (2015). The MovieLens Datasets:
+History and Context. ACM TiiS, 5(4), Article 19.
